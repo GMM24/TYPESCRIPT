@@ -1,4 +1,4 @@
-# M1 RA2-ADHD04
+# ADHD04
 
 ## ¿Qué es TypeScript?
 TypeScript es un superconjunto de JavaScript que añade tipado estático al lenguaje. Esto significa que las variables, funciones y otros elementos del código se asocian con tipos específicos, lo que permite al compilador detectar errores potenciales durante el desarrollo y mejorar la legibilidad del código. 
@@ -76,4 +76,26 @@ tipoRetorno: Especifica el tipo de dato que devuelve la función.
 
 {}: Define el bloque de código que representa el cuerpo de la función.
 
+## ¿Qué son los parámetros opcionales y los parámetros predeterminados en funciones?
 
+Parámetros opcionales y parámetros predeterminados en funciones:
+
+Los parámetros opcionales y los parámetros predeterminados son dos características comunes en la definición de funciones en muchos lenguajes de programación. Ambos permiten mayor flexibilidad al llamar a funciones, haciendo el código más legible y reutilizable.
+
+Parámetros opcionales:
+
+Un parámetro opcional es aquel que no es obligatorio proporcionarle un valor al llamar a la función. Si no se proporciona un valor para un parámetro opcional, la función utiliza un valor predeterminado, o bien se comporta de una manera específica definida por el programador.
+
+## ¿Cuáles son las mejores practicas para escribir código limpio y mantenible en TypeScript?
+
+Habilitar aprobaciones de datos:
+
+TypeScript se destaca por su sistema de tipos, el cual permite detectar errores en tiempo de compilación que podrían pasar desapercibidos en JavaScript.
+
+Usar interfaces y tipos personalizados: 
+
+Las interfaces y los tipos personalizados permiten definir estructuras de datos más complejas y precisas, mejorando la legibilidad y la autodocumentación del código. 
+
+Aprovechar las inferencias de tipos:
+
+TypeScript infiere automáticamente los tipos de variables y expresiones basadas en su uso. Esto significa que no siempre es necesario escribir anotaciones de tipo explícitas, lo que hace que el código sea más conciso y fácil de leer.
