@@ -3,7 +3,6 @@ var inputNum2 = document.getElementById('num3');
 var inputNum3 = document.getElementById('num2');
 var btnDivi = document.getElementById('btnresultado');
 btnDivi.addEventListener('click', dividir);
-// const promedio: number = (inputNum1 + inputNum2 + inputNum3) / 3;
 var btnResultado = document.getElementById('resultado');
 var numero1 = 0;
 var numero2 = 0;
@@ -27,6 +26,3 @@ function dividir() {
         btnResultado.textContent = "Los valores ingresados no son correctos";
     }
 }
-// function calcularPromedio() {
-//     document.getElementById('resultado').innerHTML = `El promedio es: ${promedio}`;
-// }

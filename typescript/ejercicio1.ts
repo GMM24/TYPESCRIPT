@@ -4,7 +4,6 @@ const inputNum3 = document.getElementById('num2') as HTMLInputElement;
 const btnDivi = document.getElementById('btnresultado') as HTMLButtonElement;
 
 btnDivi.addEventListener('click', dividir);
-// const promedio: number = (inputNum1 + inputNum2 + inputNum3) / 3;
 
 const btnResultado = document.getElementById('resultado') as HTMLParagraphElement;
 
@@ -33,9 +32,3 @@ function dividir() {
     }
 }
 
-
-
-// function calcularPromedio() {
-
-//     document.getElementById('resultado').innerHTML = `El promedio es: ${promedio}`;
-// }

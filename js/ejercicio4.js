@@ -1,4 +1,3 @@
-// import { isNamespaceExport } from "typescript";
 function mayorMenor() {
     var inputNum1 = (document.getElementById('numero1').value);
     var inputNum2 = (document.getElementById('numero2').value);
