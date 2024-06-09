@@ -1,55 +1,31 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var inputNum1 = document.getElementById('numero1');
-var inputNum2 = document.getElementById('numero2');
-var inputNum3 = document.getElementById('numero3');
-var btnMayormenor = document.getElementById('btnresultado');
-btnMayormenor.addEventListener('click', mayormenor);
-var btnResultado = document.getElementById('resultado');
-var num1 = 0;
-var num2 = 0;
-var num3 = 0;
-var mayor;
-var menor;
-function Valor() {
-    var respuesta = 0;
-    num1 = parseFloat(inputNum1.value);
-    num2 = parseFloat(inputNum2.value);
-    num3 = parseFloat(inputNum3.value);
-    if (isNaN(num2) || isNaN(num2) || isNaN(num3)) {
-        respuesta = 0;
+// import { isNamespaceExport } from "typescript";
+function mayorMenor() {
+    var inputNum1 = (document.getElementById('numero1').value);
+    var inputNum2 = (document.getElementById('numero2').value);
+    var inputNum3 = (document.getElementById('numero3').value);
+    var mayor = inputNum1;
+    var menor = inputNum1;
+    var medio;
+    if (inputNum2 > mayor) {
+        mayor = inputNum2;
     }
-    return respuesta;
-}
-function mayormenor() {
-    if (Valor() == 0) {
-        btnResultado.textContent = "Valor incorrecto";
+    else if (inputNum2 < menor) {
+        menor = inputNum2;
     }
-    if (num1 >= num2 && num1 >= num3) {
-        mayor = num1;
-        if (num2 >= num3) {
-            menor = num3;
-        }
-        else {
-            menor = num2;
-        }
+    if (inputNum3 > mayor) {
+        mayor = inputNum3;
     }
-    else if (num2 >= num1 && num2 >= num3) {
-        mayor = num2;
-        if (num1 >= num3) {
-            menor = num3;
-        }
-        else {
-            menor = num1;
-        }
+    else if (inputNum3 < menor) {
+        menor = inputNum3;
+    }
+    if (inputNum1 === mayor || inputNum1 === menor) {
+        medio = inputNum2 > inputNum3 ? inputNum3 : inputNum2;
+    }
+    else if (inputNum2 === mayor || inputNum2 === menor) {
+        medio = inputNum1 > inputNum3 ? inputNum3 : inputNum1;
     }
     else {
-        mayor = num3;
-        if (num1 >= num2) {
-            menor = num2;
-        }
-        else {
-            menor = num1;
-        }
+        medio = inputNum1 > inputNum2 ? inputNum2 : inputNum1;
     }
+    document.getElementById('resultado').textContent = "\n        El n\u00FAmero mayor es: ".concat(mayor, "   El n\u00FAmero menor es: ").concat(menor, "    El n\u00FAmero medio es: ").concat(medio, "\n    ");
 }

@@ -1,59 +1,32 @@
-import { isNamespaceExport } from "typescript";
+// import { isNamespaceExport } from "typescript";
 
-const inputNum1 = document.getElementById('numero1') as HTMLInputElement;
-const inputNum2 = document.getElementById('numero2') as HTMLInputElement;
-const inputNum3 = document.getElementById('numero3') as HTMLInputElement;
-const btnMayormenor = document.getElementById('btnresultado') as HTMLButtonElement;
+function mayorMenor() {
+    const inputNum1 = ((document.getElementById('numero1') as HTMLInputElement).value);
+    const inputNum2 = ((document.getElementById('numero2') as HTMLInputElement).value);
+    const inputNum3 = ((document.getElementById('numero3') as HTMLInputElement).value);
 
-btnMayormenor.addEventListener('click', mayormenor);
-
-const btnResultado = document.getElementById('resultado') as HTMLParagraphElement;
-
-let num1: number = 0;
-let num2: number = 0;
-let num3: number = 0;
-let mayor: number;
-let menor: number;
-
-function Valor():number{
-    let respuesta: number = 0;
-    num1 = parseFloat(inputNum1.value);
-    num2 = parseFloat(inputNum2.value);
-    num3 = parseFloat(inputNum3.value);
-
-    if(isNaN(num2)||isNaN(num2)||isNaN(num3)){
-        respuesta = 0;
+    let mayor = inputNum1;
+    let menor = inputNum1;
+    let medio;
+    if (inputNum2 > mayor) {
+        mayor = inputNum2;
+    } else if (inputNum2 < menor) {
+        menor = inputNum2;
     }
-    return respuesta;
-}
-
-function mayormenor(){
-    if(Valor()==0){
-        btnResultado.textContent = "Valor incorrecto"
+    if (inputNum3 > mayor) {
+        mayor = inputNum3;
+    } else if (inputNum3 < menor) {
+        menor = inputNum3;
     }
-    if (num1 >= num2 && num1 >= num3) {
-        mayor = num1;
-        if (num2 >= num3) {
-            menor = num3;
-        } else {
-            menor = num2;
-        }
-    } else if (num2 >= num1 && num2 >= num3) {
-        mayor = num2;
-        if (num1 >= num3) {
-            menor = num3;
-        } else {
-            menor = num1;
-        }
+    if (inputNum1 === mayor || inputNum1 === menor) {
+        medio = inputNum2 > inputNum3 ? inputNum3 : inputNum2;
+    } else if (inputNum2 === mayor || inputNum2 === menor) {
+        medio = inputNum1 > inputNum3 ? inputNum3 : inputNum1;
     } else {
-        mayor = num3;
-        if (num1 >= num2) {
-            menor = num2;
-        } else {
-            menor = num1;
-        }
+        medio = inputNum1 > inputNum2 ? inputNum2 : inputNum1;
     }
+    document.getElementById('resultado').textContent = `
+        El número mayor es: ${mayor}   El número menor es: ${menor}    El número medio es: ${medio}
+    `;
 
-    
-    
 }
