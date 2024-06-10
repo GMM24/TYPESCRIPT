@@ -15,23 +15,37 @@ var numero1 = 0;
 var numero2 = 0;
 //crear metodos para las diversas operaciones
 function recibirValores() {
+    var respuesta = 0;
     numero1 = parseFloat(inputNumero1.value);
     numero2 = parseFloat(inputNumero2.value);
+    if (isNaN(numero1)) {
+        respuesta = 100;
+    }
 }
-function suma() {
-    recibirValores(); //llamar a la funcion que recibe valores
-    var suma = numero1 + numero2;
-    divResultado.textContent = "La suma es: " + suma;
+function sumar() {
+    if (recibirValores() == 100) {
+        divResultado.textContent = "Error en Valores";
+    }
+    else {
+        var suma = numero1 + numero2;
+        divResultado.textContent = "La suma es: " + suma;
+    }
+    // recibirValores();//llamar a la funcion que recibe valores
+    // const suma= numero1 + numero2;
+    // divResultado.textContent = "La suma es: " + suma;
 }
-function restar() {
+function resta() {
+    recibirValores();
     var resta = numero1 - numero2;
     divResultado.textContent = "La resta es: " + resta;
 }
-function multiplicar() {
+function multi() {
+    recibirValores();
     var multiplicacion = numero1 * numero2;
     divResultado.textContent = "La multiplicaión es: " + multiplicacion;
 }
-function dividir() {
+function div() {
+    recibirValores();
     var division = numero1 / numero2;
     divResultado.textContent = "La divisón es: " + division;
 }

@@ -8,9 +8,9 @@ const btnMulti = document.getElementById('btnMulti') as HTMLButtonElement;
 const btnDiv   = document.getElementById('btnDiv') as HTMLButtonElement;
 
 // añadir eventos a los botones (evento,funcion)
-btnResta.addEventListener('click', restar);
-btnMulti.addEventListener('click', multiplicar);
-btnDiv.addEventListener('click', dividir);
+btnResta.addEventListener('click',restar);
+btnMulti.addEventListener('click',multiplicar);
+btnDiv.addEventListener('click',dividir);
 
 //Enlazar etiqueta (div) donde se mostrara el resultado
 const divResultado = document.getElementById('resultado') as HTMLParagraphElement;
